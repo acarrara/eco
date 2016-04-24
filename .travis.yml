@@ -4,4 +4,12 @@ node_js:
 - '5'
 script: gulp test
 after_script:
-  - npm run-script coveralls
+- npm run-script coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: YzOfVfGuRGKRRk0QIMTJf1PpNWcWy/K/th5kY4xifSyEiWYBaVIcALIyxiYYigRk44LA2TbZLo2d3Qc+x0MqwYEX/8PRj1/alknxxlwY/4CRi72Bus+Eoc2I4G50Lg1LjPK7dFqY9+5ZHuvBnMsylHaGRnqwudAO3Qg2wzzUwhYpnBRZY/I/oNRLR9dGU3vUKDLO/gCrewhd/5pZY/6FRiNdSQMrUc3QWB/oQ4NPMRsR9w33+vfoHe5Q0jid6/3FUPatQ8Dy6rdQnyru9f7pmmptlZggRGQYHHR/An+zKKPoTkWCtC7++6SAtt/Uvk/+WHkCwgEz+aGA41/ooOObO4lxLpxCdkc2fwn75iP/Hmnnv41PWQx9qL2zG6l+17poiUwP+5QDLcz9Qe7h7oxil1ozQZLlVkV6xPZJ4cEiSX0oazq4ukzBjbNPl0jRB1AxCCa/cdhrTrDRzRJ0avX7Ou/lEreacJxaO2L3AL7OHJrVVXSGgmcZWiBr0SfpZUiBOQ99/N5gXlEhVWYezig8ZppgnfKbFIdawFuwbG4msJVQS48a3yX/KW8YNopImiU/UhjxI0n3OeJVFXRa21juWNEm2vQjpOx1AFWbu/KPIX0jNchxnLTwaX3hJidf+6bj6+IsihrqMMSC12T0ciay3cBRiAs2qwz30czjtLJRCVo=
+  app: chickens-eco
+  on:
+    repo: chickens-team/eco
+    branch: development
