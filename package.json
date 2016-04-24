@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/acarrara/eco.git"
   },
+  "engines": {
+    "node": "5.8.0"
+  },
   "scripts": {
     "preinstall": "npm i typings",
     "postinstall": "./node_modules/.bin/typings install; gulp serve-heroku",
