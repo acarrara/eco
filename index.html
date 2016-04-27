@@ -1,5 +1,5 @@
 <html>
-  <head>
+<head>
     <title>Eco Markdown Editor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -9,29 +9,32 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
     <!-- endinject -->
     <!-- endbuild -->
-  </head>
-  <body>
-    <app></app>
+    <link rel="stylesheet" type="text/css" href="node_modules/trix/dist/trix.css">
+</head>
+<body>
+<!--<app></app>-->
+<trix-editor></trix-editor>
 
-    <!-- build:js assets/bundle.js -->
-    <!-- endinject -->
+<!-- build:js assets/bundle.js -->
+<!-- endinject -->
 
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <!-- endbuild -->
+<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script src="node_modules/trix/dist/trix.js"></script>
+<!-- endbuild -->
 
-    <!-- build:remove -->
-    <script src="systemjs.conf.js"></script>
-    <!-- endbuild -->
+<!-- build:remove -->
+<script src="systemjs.conf.js"></script>
+<!-- endbuild -->
 
-    <script>
-      System.config({
+<script>
+    System.config({
         format: 'register',
         defaultExtension: 'js',
         defaultJSExtensions: true,
-      });
-      System.import('app/main')
-              .then(null, console.error.bind(console));
-    </script>
-  </body>
+    });
+    System.import('app/main')
+            .then(null, console.error.bind(console));
+</script>
+</body>
 </html>
